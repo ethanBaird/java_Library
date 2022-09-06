@@ -28,4 +28,12 @@ public class LibraryTest {
         assertEquals(0, fullLibrary.getBookCount());
     }
 
+    @Test
+    public void canGetNumberOfBooksByGenre() {
+        library.addBook(book);
+        library.addBook(book);
+        library.addBook(book);
+        assertEquals(3, library.getBookCountByGenre("Fantasy"));
+    }
+
 }
