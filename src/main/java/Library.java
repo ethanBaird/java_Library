@@ -20,4 +20,12 @@ public class Library {
         }
     }
 
+    public Book lend(Book book){
+        if (this.books.contains(book)){
+            int index = this.books.indexOf(book);
+            return this.books.remove(index);
+        }
+        return null;
+    }
+
 }
