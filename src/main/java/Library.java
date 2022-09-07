@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Set;
 
 public class Library {
 
@@ -26,7 +27,7 @@ public class Library {
 
     public void trackGenre(Book book){
         String genre = book.getGenre();
-        if (this.genres.keySet().contains(genre)){
+        if (this.genres.containsKey(genre)){
             int current = this.genres.get(genre);
             this.genres.replace(genre, current + 1);
         } else {
